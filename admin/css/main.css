@@ -1,0 +1,24 @@
+#bi-shortcode {
+    background-color: #fff;
+    color: #3c434a;
+    border: 1px solid #8c8f94;
+}
+
+#bi-copy-shortcode {
+    display: inline-flex;
+    align-items: center;
+}
+
+#bi-copy-shortcode {
+    height: 30px;
+    cursor: pointer;
+}
+
+#bi-copy-shortcode svg {
+    width: 16px;
+    margin-right: 0.7em;
+}
+
+.bi-info td > div {
+    display: flex;
+}

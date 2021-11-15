@@ -12,6 +12,8 @@
 // Exit if accessed directly
 if ( ! defined('ABSPATH') ) exit;
 
+if ( ! defined( 'BI_MENU_PAGE_SLUG' ) ) 		define( 'BI_MENU_PAGE_SLUG'		, 'toplevel_page_bookingit' );
+
 /**
  * Add admin menu pages
  *
@@ -99,16 +101,16 @@ function bi_get_settings() {
  * @since 1.0
  */
 function bi_enqueue_css_js( $hook ) {
-	
-    // Load only on Starer Plugin plugin pages
-	if ( $hook != "settings_page_bookingit" ) {
+
+    // Load only on BookingIt Plugin plugin pages
+	if ( $hook !== BI_MENU_PAGE_SLUG ) {
 		return;
 	}
 	
 	// Main CSS
-	// wp_enqueue_style( 'prefix-admin-main-css', BI_STARTER_PLUGIN_URL . 'admin/css/main.css', '', bi_VERSION_NUM );
+	 wp_enqueue_style( 'bi-admin-main-css', BI_STARTER_PLUGIN_URL . 'admin/css/main.css', '', BI_VERSION_NUM );
 	
 	// Main JS
-    // wp_enqueue_script( 'prefix-admin-main-js', BI_STARTER_PLUGIN_URL . 'admin/js/main.js', array( 'jquery' ), false, true );
+     wp_enqueue_script( 'bi-admin-main-js', BI_STARTER_PLUGIN_URL . 'admin/js/main.js', array( 'jquery' ), false, true );
 }
 add_action( 'admin_enqueue_scripts', 'bi_enqueue_css_js' );

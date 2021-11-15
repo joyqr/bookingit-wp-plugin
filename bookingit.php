@@ -61,10 +61,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since 1.0
  */
-if ( ! defined( 'BI_VERSION_NUM' ) ) 		define( 'BI_VERSION_NUM'		, '1.0' ); // Plugin version constant
+if ( ! defined( 'BI_VERSION_NUM' ) ) 		    define( 'BI_VERSION_NUM'		, '1.0' ); // Plugin version constant
 if ( ! defined( 'BI_STARTER_PLUGIN' ) )		define( 'BI_STARTER_PLUGIN'		, trim( dirname( plugin_basename( __FILE__ ) ), '/' ) ); // Name of the plugin folder eg - 'bookingit'
 if ( ! defined( 'BI_STARTER_PLUGIN_DIR' ) )	define( 'BI_STARTER_PLUGIN_DIR'	, plugin_dir_path( __FILE__ ) ); // Plugin directory absolute path with the trailing slash. Useful for using with includes eg - /var/www/html/wp-content/plugins/bookingit/
 if ( ! defined( 'BI_STARTER_PLUGIN_URL' ) )	define( 'BI_STARTER_PLUGIN_URL'	, plugin_dir_url( __FILE__ ) ); // URL to the plugin folder with the trailing slash. Useful for referencing src eg - http://localhost/wp/wp-content/plugins/bookingit/
+if ( ! defined( 'BI_SHORTCODE' ) )	        define( 'BI_SHORTCODE'          , '[bookingit_form]' ); // URL to the plugin folder with the trailing slash. Useful for referencing src eg - http://localhost/wp/wp-content/plugins/bookingit/
 
 /**
  * Database upgrade todo
