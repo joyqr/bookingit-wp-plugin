@@ -47,7 +47,7 @@ function bi_settings_link( $links ) {
 		$links
 	);
 }
-add_filter( 'plugin_action_links_' . bi_STARTER_PLUGIN . '/bookingit.php', 'bi_settings_link' );
+add_filter( 'plugin_action_links_' . BI_STARTER_PLUGIN . '/bookingit.php', 'bi_settings_link' );
 
 /**
  * Add donate and other links to plugins list
@@ -106,6 +106,6 @@ function bi_footer_version($default) {
 		return $default;
 	}
 	
-	return 'Plugin version ' . bi_VERSION_NUM;
+	return 'Plugin version ' . BI_VERSION_NUM;
 }
 add_filter( 'update_footer', 'bi_footer_version', 11 );

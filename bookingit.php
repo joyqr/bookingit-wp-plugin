@@ -50,7 +50,7 @@
  * - Update UI format and settings		in \admin\admin-ui-render.php
  * - Update uninstall.php
  * - Update readme.txt
- * - Update bi_VERSION_NUM 			in bookingit.php (keep this line for future updates)
+ * - Update BI_VERSION_NUM 			in bookingit.php (keep this line for future updates)
  */
 
 // Exit if accessed directly
@@ -61,10 +61,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  *
  * @since 1.0
  */
-if ( ! defined( 'bi_VERSION_NUM' ) ) 		define( 'bi_VERSION_NUM'		, '1.0' ); // Plugin version constant
-if ( ! defined( 'bi_STARTER_PLUGIN' ) )		define( 'bi_STARTER_PLUGIN'		, trim( dirname( plugin_basename( __FILE__ ) ), '/' ) ); // Name of the plugin folder eg - 'bookingit'
-if ( ! defined( 'bi_STARTER_PLUGIN_DIR' ) )	define( 'bi_STARTER_PLUGIN_DIR'	, plugin_dir_path( __FILE__ ) ); // Plugin directory absolute path with the trailing slash. Useful for using with includes eg - /var/www/html/wp-content/plugins/bookingit/
-if ( ! defined( 'bi_STARTER_PLUGIN_URL' ) )	define( 'bi_STARTER_PLUGIN_URL'	, plugin_dir_url( __FILE__ ) ); // URL to the plugin folder with the trailing slash. Useful for referencing src eg - http://localhost/wp/wp-content/plugins/bookingit/
+if ( ! defined( 'BI_VERSION_NUM' ) ) 		define( 'BI_VERSION_NUM'		, '1.0' ); // Plugin version constant
+if ( ! defined( 'BI_STARTER_PLUGIN' ) )		define( 'BI_STARTER_PLUGIN'		, trim( dirname( plugin_basename( __FILE__ ) ), '/' ) ); // Name of the plugin folder eg - 'bookingit'
+if ( ! defined( 'BI_STARTER_PLUGIN_DIR' ) )	define( 'BI_STARTER_PLUGIN_DIR'	, plugin_dir_path( __FILE__ ) ); // Plugin directory absolute path with the trailing slash. Useful for using with includes eg - /var/www/html/wp-content/plugins/bookingit/
+if ( ! defined( 'BI_STARTER_PLUGIN_URL' ) )	define( 'BI_STARTER_PLUGIN_URL'	, plugin_dir_url( __FILE__ ) ); // URL to the plugin folder with the trailing slash. Useful for referencing src eg - http://localhost/wp/wp-content/plugins/bookingit/
 
 /**
  * Database upgrade todo
@@ -77,19 +77,19 @@ function bi_upgrader() {
 	$current_ver = get_option( 'abl_bi_version', '0.0' );
 	
 	// Return if we are already on updated version. 
-	if ( version_compare( $current_ver, bi_VERSION_NUM, '==' ) ) {
+	if ( version_compare( $current_ver, BI_VERSION_NUM, '==' ) ) {
 		return;
 	}
 	
 	// This part will only be excuted once when a user upgrades from an older version to a newer version.
 	
 	// Finally add the current version to the database. Upgrade todo complete. 
-	update_option( 'abl_bi_version', bi_VERSION_NUM );
+	update_option( 'abl_bi_version', BI_VERSION_NUM );
 }
 add_action( 'admin_init', 'bi_upgrader' );
 
 // Load everything
-require_once( bi_STARTER_PLUGIN_DIR . 'loader.php' );
+require_once( BI_STARTER_PLUGIN_DIR . 'loader.php' );
 
 // Register activation hook (this has to be in the main plugin file or refer bit.ly/2qMbn2O)
 register_activation_hook( __FILE__, 'bi_activate_plugin' );

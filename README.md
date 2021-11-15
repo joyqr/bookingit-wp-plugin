@@ -32,4 +32,4 @@ A well documented starter plugin for quick WordPress plugin development complete
 - Update UI format and settings			in \admin\admin-ui-render.php
 - Update uninstall.php
 - Update readme.txt
-- Update bi_VERSION_NUM 			in bi_bookingit.php (keep this line for future updates)
+- Update BI_VERSION_NUM 			in bi_bookingit.php (keep this line for future updates)
