@@ -22,3 +22,13 @@
 .bi-info td > div {
     display: flex;
 }
+
+.toplevel_page_bookingit #wpbody-content .wrap>a {
+    display: inline-flex;
+    margin: 2em 0;
+}
+
+.toplevel_page_bookingit #wpbody-content .wrap>a svg {
+    width: 190px;
+    height: auto;
+}
