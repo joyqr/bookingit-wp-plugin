@@ -32,3 +32,10 @@
     width: 190px;
     height: auto;
 }
+
+#bookingit_embed {
+    max-width: 750px;
+    background: #fff;
+    min-height: 250px;
+    padding: 1em 2em;
+}

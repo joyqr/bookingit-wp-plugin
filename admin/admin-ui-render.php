@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @since 1.0
  */
 function bi_general_settings_section_callback() {
-	echo '<p>' . __('Please paste in the group ID from the settings page found in your BookingIt account', 'bookingit') . '</p>';
+	return;
 }
 
 /**
@@ -31,12 +31,11 @@ function bi_general_settings_field_callback() {
 	$settings = bi_get_settings();
 
 	// General Settings. Name of form element should be same as the setting name in register_setting(). ?>
-	
 	<fieldset>
-	
 		<!-- Text Input -->
-		<input type="text" name="bi_settings[bi_venue_id]" class="regular-text" value="<?php if ( isset( $settings['bi_venue_id'] ) && ( ! empty($settings['bi_venue_id']) ) ) echo esc_attr($settings['bi_venue_id']); ?>"/>
-        {image of the settings page with venue ID}
+		<input type="text" name="bi_settings[bi_venue_slug]" class="regular-text" value="<?php if ( isset( $settings['bi_venue_slug'] ) && ( ! empty($settings['bi_venue_slug']) ) ) echo esc_attr($settings['bi_venue_slug']); ?>"/>
+        <p class="description"><?php esc_html_e('Fill in the venue slug from BookingIt settings (example: my-awesome-restaurant)', 'bookingit'); ?></p>
+        <p>{image of the settings page with venue slug}</p>
 	</fieldset>
 	<?php
 }
@@ -81,11 +80,11 @@ function bi_admin_interface_render () {
             </svg>
         </a>
         <h1>BookingIt</h1>
-
+        <form action="options.php" method="post">
         <?php
 			// Output nonce, action, and option_page fields for a settings page.
 			settings_fields( 'bi_settings_group' );
-?>
+        ?>
 
         <?php
 			// Prints out all settings sections added to a particular settings page. 
@@ -108,11 +107,11 @@ function bi_admin_interface_render () {
                     </tr>
                 </tbody>
             </table>
-            <code>
-                <?php
-                esc_html_e(bi_get_embed_html('test-slug'));
-                ?>
-            </code>
+<!--            <code>-->
+<!--                --><?php
+//                esc_html_e(bi_get_embed_html('test-slug'));
+//                ?>
+<!--            </code>-->
 			<?php
 			// @todo add support for page builders WP Block, Elementor, Bakery...
 
@@ -120,6 +119,8 @@ function bi_admin_interface_render () {
 			submit_button( __('Save Settings', 'bookingit') );
 			?>
 		</form>
+        <h2>Booking form preview:</h2>
 	</div>
 	<?php
+    do_shortcode('[bookingit_form]');
 }

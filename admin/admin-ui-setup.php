@@ -44,7 +44,7 @@ function bi_register_settings() {
 	register_setting( 
 		'bi_settings_group', 			// Group name
 		'bi_settings', 					// Setting name = html form <input> name on settings form
-		'bi_validater_and_sanitizer'	// Input sanitizer
+		'bi_validater_and_sanitizer'	        // Input sanitizer
 	);
 	
 	// Register A New Section
@@ -57,8 +57,8 @@ function bi_register_settings() {
 
 	// General Settings
     add_settings_field(
-        'bi_venue_id',							// ID
-        __('Venue ID', 'bookingit'),					// Title
+        'bi_venue_slug',							// ID
+        __('Venue Slug', 'bookingit'),					// Title
         'bi_general_settings_field_callback',			// Callback function
         'bookingit',											// Page slug
 		'bi_general_settings_section'							// Settings Section ID
@@ -74,8 +74,8 @@ add_action( 'admin_init', 'bi_register_settings' );
  */
 function bi_validater_and_sanitizer ( $settings ) {
 	// Sanitize text field
-	$settings['bi_venue_id'] = sanitize_text_field($settings['bi_venue_id']);
-	
+	$settings['bi_venue_slug'] = sanitize_text_field($settings['bi_venue_slug']);
+
 	return $settings;
 }
 			
@@ -87,7 +87,6 @@ function bi_validater_and_sanitizer ( $settings ) {
  * @since 1.0
  */
 function bi_get_settings() {
-
 	$defaults = array();
 
 	$settings = get_option('bi_settings', $defaults);
