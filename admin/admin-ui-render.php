@@ -35,7 +35,9 @@ function bi_general_settings_field_callback() {
 		<!-- Text Input -->
 		<input type="text" name="bi_settings[bi_venue_slug]" class="regular-text" value="<?php if ( isset( $settings['bi_venue_slug'] ) && ( ! empty($settings['bi_venue_slug']) ) ) echo esc_attr($settings['bi_venue_slug']); ?>"/>
         <p class="description"><?php esc_html_e('Fill in the venue slug from BookingIt settings (example: my-awesome-restaurant)', 'bookingit'); ?></p>
-        <p>{image of the settings page with venue slug}</p>
+        <p>
+            <a href="https://bookingit.io/settings/booking-links/2" target="_blank" rel=”noopener”>Bookingit form setting</a>
+        </p>
 	</fieldset>
 	<?php
 }
