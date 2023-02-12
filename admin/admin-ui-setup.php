@@ -12,7 +12,7 @@
 // Exit if accessed directly
 if ( ! defined('ABSPATH') ) exit;
 
-if ( ! defined( 'BI_MENU_PAGE_SLUG' ) ) 		define( 'BI_MENU_PAGE_SLUG'		, 'toplevel_page_bookingit' );
+if ( ! defined( 'BI_MENU_PAGE_SLUG')) define('BI_MENU_PAGE_SLUG', 'toplevel_page_bookingit');
 
 /**
  * Add admin menu pages
@@ -100,7 +100,6 @@ function bi_get_settings() {
  * @since 1.0
  */
 function bi_enqueue_css_js( $hook ) {
-
     // Load only on BookingIt Plugin plugin pages
 	if ( $hook !== BI_MENU_PAGE_SLUG ) {
 		return;

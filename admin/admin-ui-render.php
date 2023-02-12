@@ -121,7 +121,7 @@ function bi_admin_interface_render () {
 			submit_button( __('Save Settings', 'bookingit') );
 			?>
 		</form>
-        <h2>Booking form preview:</h2>
+        <h2><?php esc_html_e('Booking form preview:', 'bookingit'); ?></h2>
 	</div>
 	<?php
     do_shortcode('[bookingit_form]');

@@ -33,7 +33,8 @@ function bi_booking_form_shortcode() {
 		echo '</strong></p></div>';
 		return;
 	}
-	return bi_get_embed_html($settings['bi_venue_slug']); 
+
+	return bi_get_embed_html( esc_html( $settings['bi_venue_slug'] ) );
 }
 
-add_shortcode('bookingit_form', 'bi_booking_form_shortcode');
+add_shortcode( 'bookingit_form', 'bi_booking_form_shortcode' );

@@ -57,15 +57,13 @@ add_filter( 'plugin_action_links_' . BI_STARTER_PLUGIN . '/bookingit.php', 'bi_s
 function bi_plugin_row_meta( $links, $file ) {
 	if ( strpos( $file, 'bookingit.php' ) !== false ) {
 		$new_links = array(
-				'donate' 	=> '<a href="http://millionclues.com/donate/" target="_blank">Donate</a>',
-				'kuttappi' 	=> '<a href="http://kuttappi.com/" target="_blank">My Travelogue</a>',
-				'hireme' 	=> '<a href="http://millionclues.com/portfolio/" target="_blank">Hire Me For A Project</a>',
+				'example' 	=> '<a href="#" target="_blank">Text</a>',
 				);
 		$links = array_merge( $links, $new_links );
 	}
 	return $links;
 }
-add_filter( 'plugin_row_meta', 'bi_plugin_row_meta', 10, 2 );
+//add_filter( 'plugin_row_meta', 'bi_plugin_row_meta', 10, 2 );
 
 /**
  * Admin footer text
@@ -91,7 +89,7 @@ function bi_footer_text($default) {
 	
 	return $bi_footer_text;
 }
-add_filter('admin_footer_text', 'bi_footer_text');
+//add_filter('admin_footer_text', 'bi_footer_text');
 
 /**
  * Admin footer version
@@ -106,6 +104,6 @@ function bi_footer_version($default) {
 		return $default;
 	}
 	
-	return 'Plugin version ' . BI_VERSION_NUM;
+	return __('Plugin version ', 'bookingit') . BI_VERSION_NUM;
 }
 add_filter( 'update_footer', 'bi_footer_version', 11 );
