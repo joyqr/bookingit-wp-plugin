@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: BookingIt
+ * Plugin Name: BookingIt - Booking System
  * Plugin URI: https://bookingit.io
  * Description: Integrate your BookingIt account with WordPress. Easily add booking form to any page, using shortcode
  * or custom blocks. Easily create and manage your own booking system. Modernise Bookings For Your Restaurant, Winery,
