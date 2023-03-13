@@ -17,5 +17,5 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) die;
  *
  * @since		1.0
  */ 
-delete_option( 'bi_settings' );
-delete_option( 'abl_bi_version' );
+delete_option( 'bookingit_settings' );
+delete_option( 'abl_bookingit_version' );
