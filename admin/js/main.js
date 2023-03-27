@@ -1,6 +1,5 @@
 (function ($) {
     function copyToClipBoard(event) {
-        console.log('clicked');
         var text = event.data.text;
         var input = document.createElement('input');
 
