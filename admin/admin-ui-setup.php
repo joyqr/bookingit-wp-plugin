@@ -106,9 +106,9 @@ function bookingit_enqueue_css_js( $hook ) {
 	}
 	
 	// Main CSS
-	 wp_enqueue_style( 'bi-admin-main-css', BOOKINGIT_STARTER_PLUGIN_URL . 'admin/css/main.css', '', BOOKINGIT_VERSION_NUM );
+	 wp_enqueue_style( 'bookingit-admin-main-css', BOOKINGIT_STARTER_PLUGIN_URL . 'admin/css/main.css', '', BOOKINGIT_VERSION_NUM );
 	
 	// Main JS
-     wp_enqueue_script( 'bi-admin-main-js', BOOKINGIT_STARTER_PLUGIN_URL . 'admin/js/main.js', array( 'jquery' ), false, true );
+     wp_enqueue_script( 'bookingit-admin-main-js', BOOKINGIT_STARTER_PLUGIN_URL . 'admin/js/main.js', array( 'jquery' ), false, true );
 }
 add_action( 'admin_enqueue_scripts', 'bookingit_enqueue_css_js' );
