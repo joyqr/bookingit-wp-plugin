@@ -16,12 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @return string
  */
 function bookingit_get_embed_html( $venue_slug = "" ) {
-	wp_enqueue_script( 'iframeResizer', 'https://bookingit.io/js/iframeResizer.min.js', array(), '1.0' );
-	wp_enqueue_script( 'embed', 'https://bookingit.io/js/embed.js', array(), '1.0' );
+	wp_enqueue_script( 'bookingit-iframeResizer', 'https://bookingit.io/js/iframeResizer.min.js', array(), '1.0' );
+	wp_enqueue_script( 'bookingit-embed', 'https://bookingit.io/js/embed.js', array(), '1.0' );
 
 	echo "<div id=\"booking_it_embed\"  style=\"height: 800px;\"></div>";
 
-	wp_add_inline_script( 'embed', "embedData({\"store\": \"$venue_slug\", \"logo\": false })" );
+	wp_add_inline_script( 'bookingit-embed', "embedData({\"store\": \"$venue_slug\", \"logo\": false })" );
 
 	return;
 }
