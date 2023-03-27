@@ -1,4 +1,4 @@
-=== Starter Plugin ===
+=== BookingIt - Booking System ===
 Contributors: DanijelSVK
 Tags: booking, free booking form, restaurant booking, booking system
 Requires at least: 5.0
