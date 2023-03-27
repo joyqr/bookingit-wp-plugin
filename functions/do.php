@@ -29,6 +29,8 @@ function bookingit_get_embed_html( $venue_slug = "" ) {
 function bookingit_booking_form_shortcode() {
 	$settings = bookingit_get_settings();
 
+	// @todo handle booking form doesn't exist
+
 	if( !isset($settings['bookingit_venue_slug']) || empty($settings['bookingit_venue_slug']) ) {
 		echo '<div id="bookingit_embed"><p><strong>';
 		esc_html_e( 'Please fill in the venue url in BookingIt settings in order to display the booking widget.', 'bookingit' );
