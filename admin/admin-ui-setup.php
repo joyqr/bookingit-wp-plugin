@@ -2,7 +2,7 @@
 /**
  * Admin setup for the plugin
  *
- * @since 1.0
+ * @since 1.0.0
  * @function	bookingit_add_menu_links()		Add admin menu pages
  * @function	bookingit_register_settings	Register Settings
  * @function	bookingit_validater_and_sanitizer()	Validate And Sanitize User Input Before Its Saved To Database
@@ -17,7 +17,7 @@ if ( ! defined( 'BOOKINGIT_MENU_PAGE_SLUG')) define('BOOKINGIT_MENU_PAGE_SLUG', 
 /**
  * Add admin menu pages
  *
- * @since 1.0
+ * @since 1.0.0
  * @refer https://developer.wordpress.org/plugins/administration-menus/
  */
 function bookingit_register_my_custom_menu_page() {
@@ -36,7 +36,7 @@ add_action( 'admin_menu', 'bookingit_register_my_custom_menu_page' );
 /**
  * Register Settings
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function bookingit_register_settings() {
 
@@ -70,7 +70,7 @@ add_action( 'admin_init', 'bookingit_register_settings' );
 /**
  * Validate and sanitize user input before its saved to database
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function bookingit_validater_and_sanitizer ( $settings ) {
 	// Sanitize text field
@@ -84,7 +84,7 @@ function bookingit_validater_and_sanitizer ( $settings ) {
  *
  * @return	Array	A merged array of default and settings saved in database. 
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function bookingit_get_settings() {
 	$defaults = array();
@@ -97,7 +97,7 @@ function bookingit_get_settings() {
 /**
  * Enqueue Admin CSS and JS
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function bookingit_enqueue_css_js( $hook ) {
     // Load only on BookingIt Plugin plugin pages

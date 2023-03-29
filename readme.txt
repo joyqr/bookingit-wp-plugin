@@ -4,7 +4,7 @@ Tags: booking, free booking form, restaurant booking, booking system
 Requires at least: 5.0
 Tested up to: 6.1.1
 Requires PHP: 7.3.5
-Stable tag: trunk
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,7 +38,7 @@ In order to use this plugin, you need to have an account on [BookingIt.io](https
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.0 =
 * Date: 03/27/2023
 * First release of the plugin.
 

@@ -7,7 +7,7 @@
  * Or Cafe. Set up in 5 minutes!
  * Author: bookingit.io
  * Author URI: https://bookingit.io
- * Version: 1.0
+ * Version: 1.0.0
  * Text Domain: bookingit
  * Domain Path: /languages
  * License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -60,9 +60,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Define constants
  *
- * @since 1.0
+ * @since 1.0.0
  */
-if ( ! defined( 'BOOKINGIT_VERSION_NUM' ) ) 		define( 'BOOKINGIT_VERSION_NUM'		, '1.0' ); // Plugin version constant
+if ( ! defined( 'BOOKINGIT_VERSION_NUM' ) ) 		define( 'BOOKINGIT_VERSION_NUM'		, '1.0.0' ); // Plugin version constant
 if ( ! defined( 'BOOKINGIT_STARTER_PLUGIN' ) )		define( 'BOOKINGIT_STARTER_PLUGIN'		, trim( dirname( plugin_basename( __FILE__ ) ), '/' ) ); // Name of the plugin folder eg - 'bookingit'
 if ( ! defined( 'BOOKINGIT_STARTER_PLUGIN_DIR' ) )	define( 'BOOKINGIT_STARTER_PLUGIN_DIR'	, plugin_dir_path( __FILE__ ) ); // Plugin directory absolute path with the trailing slash. Useful for using with includes eg - /var/www/html/wp-content/plugins/bookingit/
 if ( ! defined( 'BOOKINGIT_STARTER_PLUGIN_URL' ) )	define( 'BOOKINGIT_STARTER_PLUGIN_URL'	, plugin_dir_url( __FILE__ ) ); // URL to the plugin folder with the trailing slash. Useful for referencing src eg - http://localhost/wp/wp-content/plugins/bookingit/
@@ -71,7 +71,7 @@ if ( ! defined( 'BOOKINGIT_SHORTCODE' ) )	        define( 'BOOKINGIT_SHORTCODE' 
 /**
  * Database upgrade todo
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function bookingit_upgrader() {
 	

@@ -2,7 +2,7 @@
 /**
  * Admin UI setup and render
  *
- * @since 1.0
+ * @since 1.0.0
  * @function	bookingit_general_settings_section_callback()	Callback function for General Settings section
  * @function	bookingit_general_settings_field_callback()	Callback function for General Settings field
  * @function	bookingit_admin_interface_render()				Admin interface renderer
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Callback function for General Settings section
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function bookingit_general_settings_section_callback() {
 	return;
@@ -23,7 +23,7 @@ function bookingit_general_settings_section_callback() {
 /**
  * Callback function for General Settings field
  *
- * @since 1.0
+ * @since 1.0.0
  */
 function bookingit_general_settings_field_callback() {
 
@@ -45,7 +45,7 @@ function bookingit_general_settings_field_callback() {
 /**
  * Admin interface renderer
  *
- * @since 1.0
+ * @since 1.0.0
  */ 
 function bookingit_admin_interface_render () {
 	
